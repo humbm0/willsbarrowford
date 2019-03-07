@@ -11,6 +11,7 @@
 	<title><?php echo get_bloginfo( 'name' ); ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<!-- <link href="<?php echo get_bloginfo( 'template_directory' );?>/blog.css" rel="stylesheet"> -->
   <link href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -47,9 +48,9 @@
 				<div class="nav-items">
 					<div class="left">
 						<ul>
-							<li><a class="left active" href="#">Story</a></li>
-							<li><a class="left" href="#">Gallery</a></li>
-							<li><a class="left" href="#">Visit us</a></li>
+							<li><a class="left active" href="#story">Story</a></li>
+							<li><a class="left" href="#gallery">Gallery</a></li>
+							<li><a class="left" href="#visit-us">Visit us</a></li>
 						</ul>
 					</div>
 					<div class="center">

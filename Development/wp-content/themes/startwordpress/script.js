@@ -33,4 +33,41 @@ $( document ).ready(function() {
 
 });
 
+
+// Smooth scrolling when clicking on a hash link
+$('a[href^="#"]').on('click',function (e) {
+e.preventDefault();
+var target = this.hash;
+var $target = $(target);
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top - 120
+}, 900, 'swing');
+});
+
+$('.image-slider').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next')
+});
+
+// $('.hero-slider').slick({
+//   infinite: true
+// });
+
+$(function() {
+    //caches a jQuery object containing the header element
+    var nav = $(".nav");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 300) {
+            nav.addClass("scroll");
+        } else {
+            nav.removeClass("scroll");
+        }
+    });
+});
+
 });

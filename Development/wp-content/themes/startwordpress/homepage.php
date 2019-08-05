@@ -9,23 +9,29 @@
 
 <?php get_header(); ?>
 
-
-
 <div class="container-fluid spacing-xl">
   <div class="row">
     <div class="hero">
       <div class="hero-slider">
-        <div class="bckgd-image" style="background-image: url('<?php the_field('hero_image'); ?>');">
+        <?php
+        $images = get_field('hero_slider');
+        if( $images ): ?>
+          <?php foreach( $images as $image ): ?>
+            <div class='bckgd-image' style='background-image: url("<?php echo $image['sizes']['large']; ?>");'></div>
+          <?php endforeach; ?>
+        <?php endif; ?>
       </div>
-      <div class="text" data-aos="fade-up">
-        <div class="wrapper">
-          <h3><?php the_field('sub_heading'); ?></h3>
-          <h1><?php the_field('heading'); ?></h1>
+      <div class="container">
+        <div class="text" data-aos="fade-up">
+          <div class="wrapper">
+            <h5><?php the_field('sub_heading'); ?></h5>
+            <h1><?php the_field('heading'); ?></h1>
+            <p class="l"><?php the_field('hero_para'); ?></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="container two-col-img-text spacing-xl" id="story">
@@ -41,48 +47,46 @@
   </div>
 </div>
 
-<div class="conatiner-fluid spacing-xl" style="background-image: url('<?php the_field('menu_image'); ?>');" id="menu">
-  <div class="row">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h5>Our menu</h5>
-          <h2>Grab a bite</h2>
-        </div>
-        <div class="col-md-5">
-          <h3>Snacks</h3>
-          <ul>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-5 col-md-offset-2">
-          <h3>Pizzas</h3>
-          <ul>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-            <li>
-              <h4>Spicey nuts</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-            </li>
-          </ul>
-        </div>
+<div class="conatiner-fluid spacing-xl white-bckgd" id="menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 spacing-s">
+        <h5>Our menu</h5>
+        <h2>Grab a bite</h2>
+      </div>
+      <div class="col-md-5">
+        <h3>Snacks</h3>
+        <ul>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5 col-md-offset-2">
+        <h3>Pizzas</h3>
+        <ul>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+          <li>
+            <h4>Spicey nuts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -102,22 +106,17 @@
         <?php endforeach; ?>
       <?php endif; ?>
     </div>
-    <!-- <div class="row">
-      <div class="centre spacing-xl">
-          <a href="#">Follow us on instagram</a>
-      </div>
-    </div> -->
   </div>
 </div>
 
-<div class="white-bckgd">
+<div class="container-fluid white-bckgd">
   <div class="container">
     <div class="row spacing-xl">
       <div class="contact" id="visit-us">
         <div class="col-md-6">
-          <h2>Visit us</h2>
-          <div class="address">
-            <?php the_field('find_us'); ?>
+          <h2 class="spacing-s">Visit us</h2>
+          <div class="contact">
+            <?php the_field('contact'); ?>
           </div>
         </div>
         <div class="col-md-6">
@@ -130,7 +129,7 @@
     <div class="row">
       <div class="">
         <div class="link">
-            <a href="https://www.instagram.com/willsbarrowford/" class="instagram-link"><h6><span><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></span>Folllow our instagram</h6></a>
+            <a href="https://www.instagram.com/willsbarrowford/" target="_blank" class="instagram-link"><h6><span><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></span>Folllow our instagram</h6></a>
         </div>
         <div class="arrows">
           <button type="button" name="button" class="arrow-button prev"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/left-arrow.svg" alt=""></button>
@@ -142,7 +141,7 @@
           <?php
           // use this instagram access token generator http://instagram.pixelunion.net/
           $access_token="43693637.1677ed0.a034b3f8e3e64c63b9e1c841a13206cb";
-          $photo_count=10;
+          $photo_count=12;
 
           $json_link="https://api.instagram.com/v1/users/self/media/recent/?";
           $json_link.="access_token={$access_token}&count={$photo_count}";
@@ -158,8 +157,8 @@
               $pic_like_count=$img['likes']['count'];
               $pic_comment_count=$img['comments']['count'];
               $pic_src=str_replace("http://", "https://", $img['images']['standard_resolution']['url']);
-              $pic_created_time=date("F j, Y", $img['caption']['created_time']);
-              $pic_created_time=date("F j, Y", strtotime($pic_created_time . " +1 days"));
+              // $pic_created_time=date("F j, Y", $img['caption']['created_time']);
+              // $pic_created_time=date("F j, Y", strtotime($pic_created_time . " +1 days"));
 
               echo "<div class='image' data-aos='fade-up'>";
                   echo "<a href='{$pic_link}' target='_blank'>";

@@ -10,6 +10,7 @@ Tags: bootstrap
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+
 body{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -48,6 +49,10 @@ h5 {
 h6{
   font-size: 18px;
   opacity: 0.6
+}
+p.l{
+  font-size: 	1.1250em;
+  font-weight: 400;
 }
 a{
   color: inherit;
@@ -95,6 +100,9 @@ ul{
 .spacing-s{
   margin-bottom: 24px;
 }
+.spacing-l{
+  margin-bottom: 80px;
+}
 .spacing-xl{
   margin-bottom: 144px;
 }
@@ -107,7 +115,6 @@ ul{
   position: fixed;
   top: 0;
   left: 0;
-  padding: 24px 0 24px 0;
   width: 100%;
   z-index: 100;
   transition: all 0.4s ease;
@@ -123,7 +130,7 @@ ul{
   padding: 0;
   margin-bottom: 0;
 }
-.nav .nav-items{
+/* .nav .nav-items{
   width: 100%;
   display: flex;
 }
@@ -154,13 +161,22 @@ ul{
 }
 .nav li:last-child{
   margin-right: 0;
+} */
+
+.nav .nav-items{
+  padding: 16px 40px 16px 40px;
+  height: 100%;
 }
+.nav li{
+  margin: 0 16px 0 16px;
+}
+
 .nav img{
   flex: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 80px;
   width: auto;
   transition: all 0.4s ease;
 }
@@ -179,40 +195,41 @@ ul{
 
 
 .hero{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .hero .hero-slider{
   height: 100%;
   width: 100%;
+  position: absolute;
+  z-index: 0
 }
 .hero .bckgd-image{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  /* background-attachment: fixed; */
   z-index: 1;
 }
 .hero .text{
-  text-align: center;
+  text-align: left;
   z-index: 2;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: ;
   align-items: center;
 }
 .hero .text .wrapper{
   display: block;
 }
-.hero h1, .hero h3{
+.hero h1, .hero h5, .hero p{
   color: #fff;
-  letter-spacing: 4px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+}
+.hero p{
+  margin-top: 32px;
+  max-width: 60%;
 }
 
 
@@ -233,10 +250,8 @@ ul{
 
 #menu{
   padding: 120px 0 120px 0;
-  color: #fff !important;
 }
 #menu h1,#menu h2,#menu h3,#menu h4,#menu h6{
-  color: #fff;
 }
 #menu p{
   opacity: 0.6;
@@ -372,6 +387,10 @@ footer .social-links a:hover{
   opacity: 1;
 }
 
+
+.container-fluid{
+  overflow: hidden;
+}
 
 
 

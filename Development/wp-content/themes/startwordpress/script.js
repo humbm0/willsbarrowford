@@ -52,9 +52,14 @@ $('.image-slider').slick({
   nextArrow: $('.next')
 });
 
-// $('.hero-slider').slick({
-//   infinite: true
-// });
+$('.hero-slider').slick({
+  infinite: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  speed: 1000,
+  fade: true
+});
 
 $(function() {
     //caches a jQuery object containing the header element
@@ -69,5 +74,6 @@ $(function() {
         }
     });
 });
+
 
 });

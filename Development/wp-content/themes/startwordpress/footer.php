@@ -1,16 +1,9 @@
 
 
-<!-- <footer class="blog-footer">
-  <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-  <p>
-    <a href="#">Back to top</a>
-  </p>
-</footer> -->
-
 <footer>
   <div class="container">
     <div class="float-left">
-      <p>©Willsbarrowford 2018</p>
+      <p>©Willsbarrowford 2019</p>
     </div>
     <div class="social-links float-right">
       <ul>

@@ -21,6 +21,9 @@
           <?php endforeach; ?>
         <?php endif; ?>
       </div>
+      <div class="overlay">
+
+      </div>
       <div class="container">
         <div class="text" data-aos="fade-up">
           <div class="wrapper">
@@ -47,50 +50,20 @@
   </div>
 </div>
 
-<div class="conatiner-fluid spacing-xl white-bckgd" id="menu">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 spacing-s">
-        <h5>Our menu</h5>
-        <h2>Grab a bite</h2>
-      </div>
-      <div class="col-md-5">
-        <h3>Snacks</h3>
-        <ul>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-5 col-md-offset-2">
-        <h3>Pizzas</h3>
-        <ul>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-          <li>
-            <h4>Spicey nuts</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut orci vel orci tempus placerat id ut tortor. </p>
-          </li>
-        </ul>
-      </div>
+<div class="conatiner-fluid spacing-xl">
+  <div class="row">
+    <div class="col-md-12">
+      <a href="<?php the_field('menu_document');?>" target="_blank" class="menu">
+        <img src="<?php the_field('menu_image'); ?>" alt="">
+        <div class="heading">
+          <h5>Our menu</h5>
+          <h2>Grab a bite</h2>
+        </div>
+      </a>
     </div>
   </div>
 </div>
+
 
 <div class="container" id="gallery">
   <div class="row">
@@ -111,6 +84,7 @@
 
 <div class="container-fluid white-bckgd">
   <div class="container">
+
     <div class="row spacing-xl">
       <div class="contact" id="visit-us">
         <div class="col-md-6">
@@ -121,11 +95,12 @@
         </div>
         <div class="col-md-6">
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d588.3896552622072!2d-2.2168148707423248!3d53.85071389875552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b91a1dde5ee67%3A0x6797d4c4a030b24f!2sThe+Fountains%2C+Gisburn+Rd%2C+Barrowford%2C+Nelson+BB9+8LQ!5e0!3m2!1sen!2suk!4v1544634095237" width="100%" height="569px" frameborder="0" style="border:0"></iframe>
+            <iframe width='100%' height="569px" id='mapcanvas' src='https://maps.google.com/maps?q=BB9%206DT&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'></iframe>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="">
         <div class="link">

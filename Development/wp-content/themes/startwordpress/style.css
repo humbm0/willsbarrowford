@@ -59,10 +59,19 @@ a{
   padding-bottom: 2px;
   border-bottom: 3px solid #000;
   color: inherit;
+  font-family: 'Palyfair Display', serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 a:hover{
   text-decoration: none;
   color: inherit;
+}
+a.button-white{
+  padding: 24px 32px 24px 32px;
+  background: #fff;
+  color: #000;
 }
 img{
   width: 100%;
@@ -83,7 +92,13 @@ ul{
   padding-left: 0;
 }
 
-
+.container{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.container-fluid{
+  overflow: hidden;
+}
 .no-padding{
   padding: 0;
 }
@@ -130,39 +145,6 @@ ul{
   padding: 0;
   margin-bottom: 0;
 }
-/* .nav .nav-items{
-  width: 100%;
-  display: flex;
-}
-.nav .left{
-  flex: 1;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.nav .right{
-  flex: 1;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.nav a{
-  text-decoration: none;
-  border: none;
-}
-.nav a:hover {
-  border-bottom: 1px solid #fff;
-}
-.nav li{
-  margin: 0 16px 0 16px;
-}
-.nav li:first-child{
-  margin-left: 0;
-}
-.nav li:last-child{
-  margin-right: 0;
-} */
-
 .nav .nav-items{
   padding: 16px 40px 16px 40px;
   height: 100%;
@@ -170,15 +152,24 @@ ul{
 .nav li{
   margin: 0 16px 0 16px;
 }
+.nav a{
+  border: none;
+}
+.nav .button-white{
+  float: right;
+}
+.nav.scroll .button-white{
+  padding: 16px 24px 16px 24px
+}
 
 .nav img{
-  flex: 1;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   height: 80px;
   width: auto;
   transition: all 0.4s ease;
+}
+
+.nav.scroll .nav-items{
+  padding: 8px 40px 8px 40px;
 }
 
 .nav.scroll{
@@ -194,6 +185,19 @@ ul{
 }
 
 
+.nav-mobile{
+  display: none;
+}
+
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
 .hero{
   height: 100%;
   width: 100%;
@@ -207,7 +211,6 @@ ul{
 .hero .bckgd-image{
   height: 100vh;
   width: 100vw;
-  /* background-attachment: fixed; */
   z-index: 1;
 }
 .hero .text{
@@ -231,7 +234,6 @@ ul{
   margin-top: 32px;
   max-width: 60%;
 }
-
 
 .two-col-img-text .content{
   padding-right: 80px;
@@ -262,6 +264,36 @@ ul{
 #menu li{
   margin-bottom: 24px;
 }
+.menu-col{
+  margin-bottom: 40px;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 568px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu img{
+  filter: brightness(0.5);
+  transition: all 0.6s ease;
+}
+.menu .heading{
+  position: absolute;
+  text-align: center;
+}
+.menu .heading h2, .menu .heading h5 {
+  color: #fff;
+}
+a.menu{
+  text-decoration: none;
+  border: none;
+}
+a.menu:hover img{
+  transform: scale(1.1);
+}
 
 
 
@@ -273,12 +305,9 @@ ul{
     height:100%;
 }
 
+
 .contact-form{
   margin-top: 120px;
-}
-
-.grid {
-
 }
 
 
@@ -288,7 +317,6 @@ ul{
   display: block;
   clear: both;
 }
-
 /* ---- .grid-item ---- */
 
 .grid-sizer,
@@ -388,13 +416,68 @@ footer .social-links a:hover{
 }
 
 
-.container-fluid{
-  overflow: hidden;
-}
-
-
 
 html:not(.no-js) [data-aos=fade-up] {
     -webkit-transform: translate3d(0,40px,0);
     transform: translate3d(0,40px,0);
+}
+
+
+
+.page{
+  margin-top: 144px;
+}
+
+
+
+
+@media (max-width: 991px){
+  .nav ul{
+    display: none;
+  }
+  .img-block{
+    overflow: hidden;
+  }
+  .nav .nav-items {
+    padding: 16px 16px 16px 16px;
+    height: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 576px){
+  h1 {
+    font-size: 3.998em;
+  }
+
+  h2 {font-size: 2.827em;}
+
+  h3 {font-size: 1.999em;}
+
+  h4 {font-size: 1em;}
+
+  a.button-white {
+    padding: 16px 24px 16px 24px;
+    font-size: 13px;
+  }
+  .nav.scroll .button-white {
+    padding: 16px 0px 16px 24px;
+}
+  .nav img {
+    height: 64px;
+  }
+  .hero p {
+    max-width: 100%;
+  }
+  .nav.scroll .nav-items {
+    padding: 8px 16px 8px 16px;
+  }
+  .spacing-xl{
+    margin-bottom: 80px;
+  }
+  .grid-sizer, .grid-item {
+    width: 100% !important;
+  }
 }

@@ -12,6 +12,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="<?php echo get_bloginfo( 'template_directory' );?>/hamburgers.min.css" rel="stylesheet">
   <link href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -24,18 +25,14 @@
 <body>
 
 	<div class="nav" data-aos="fade-down">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="nav-items">
-					<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
-					<ul>
-					  <li><a href="#story">Story</a></li>
-						<li><a href="#menu">Menu</a></li>
-					  <li><a href="#gallery">Gallery</a></li>
-					  <li><a href="#visit-us">Visit us</a></li>
-					  <li style="float:right"><a class="active" href="#">Book a table</a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="nav-items">
+			<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
+			<ul>
+				<li><a href="#story">Story</a></li>
+				<li><a href="#menu">Menu</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#visit-us">Visit us</a></li>
+			</ul>
+			<a class="active button-white" href="/reservations">Reserve a table</a>
 		</div>
 	</div>

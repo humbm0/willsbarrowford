@@ -33,6 +33,5 @@
 				<li><a href="#gallery">Gallery</a></li>
 				<li><a href="#visit-us">Visit us</a></li>
 			</ul>
-			<a class="active button-white" href="/reservations">Reserve a table</a>
 		</div>
 	</div>

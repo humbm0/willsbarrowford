@@ -40,10 +40,10 @@
 		<div class="nav-items">
 			<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
 			<ul>
-				<li><a href="#story">Story</a></li>
-				<li><a href="#menu">Menu</a></li>
-				<li><a href="#gallery">Gallery</a></li>
-				<li><a href="#visit-us">Visit us</a></li>
+				<li><a class="nav-item" href="#story">Story</a></li>
+				<li><a class="nav-item" href="#menu">Menu</a></li>
+				<li><a class="nav-item" href="#gallery">Gallery</a></li>
+				<li><a class="nav-item" href="#visit-us">Visit us</a></li>
 			</ul>
 		</div>
 	</div>

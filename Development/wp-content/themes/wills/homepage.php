@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
   <?php
   // use this instagram access token generator http://instagram.pixelunion.net/
@@ -83,7 +83,7 @@
   }
   ?>
   </div>
-</div>
+</div> -->
 
 <div class="conatiner-fluid spacing-xl">
   <div class="row">
@@ -136,7 +136,7 @@
       </div>
     </div>
 
-    <!-- <div class="row">
+    <div class="row">
       <div class="">
         <div class="link">
             <a href="https://www.instagram.com/willsbarrowford/" target="_blank" class="instagram-link"><h6><span><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></span>Folllow our instagram</h6></a>
@@ -180,7 +180,7 @@
           ?>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 

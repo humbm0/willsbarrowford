@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 
 	<title><?php echo get_bloginfo( 'name' ); ?></title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link href="<?php echo get_bloginfo( 'template_directory' );?>/hamburgers.min.css" rel="stylesheet">
@@ -38,12 +38,13 @@
 
 	<div class="nav" data-aos="fade-down">
 		<div class="nav-items">
-			<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
 			<ul>
 				<li><a class="nav-item" href="#story">Story</a></li>
 				<li><a class="nav-item" href="#menu">Menu</a></li>
 				<li><a class="nav-item" href="#gallery">Gallery</a></li>
 				<li><a class="nav-item" href="#visit-us">Visit us</a></li>
 			</ul>
+			<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
+			<button class="primary-button">Book a table</button>
 		</div>
 	</div>

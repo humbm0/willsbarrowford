@@ -1,15 +1,6 @@
 $( document ).ready(function() {
-  // init Masonry
-  var $grid = $('.grid').masonry({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    columnWidth: '.grid-sizer'
-  });
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.masonry();
-  });
 
+    
   AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -44,13 +35,6 @@ $('html, body').stop().animate({
 }, 900, 'swing');
 });
 
-$('.image-slider').slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next')
-});
 
 $('.hero-slider').slick({
   infinite: true,
@@ -61,23 +45,28 @@ $('.hero-slider').slick({
   fade: true
 });
 
-$(function() {
-    //caches a jQuery object containing the header element
-    var nav = $(".nav");
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+//caches a jQuery object containing the header element
+var nav = $(".nav");
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
 
-        if (scroll >= 300) {
-            nav.addClass("scroll");
-        } else {
-            nav.removeClass("scroll");
-        }
-    });
+    if (scroll >= 100) {
+        nav.addClass("scroll");
+        
+    } else {
+        nav.removeClass("scroll");
+    }
 });
 
-$(".hamburger").click(function(){
-  $(".hamburger").toggleClass("is-active");
-});
+// var element = $(".gallery-text");
+// var waypoint = new Waypoint({
+//   element: document.getElementById('basic-waypoint'),
+//   handler: function() {
+//     console.log("stick");
+//     element.addClass("fixedElement")
+//   },
+//   offset: 120
+// })
 
 
 });

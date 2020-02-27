@@ -5,7 +5,7 @@
     <div class="float-left">
       <p>©Willsbarrowford 2019</p>
     </div>
-    <div class="social-links float-right">
+    <div class="social-links footer float-right">
       <ul>
         <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/facebook.svg" alt=""></a></li>
         <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></a></li>

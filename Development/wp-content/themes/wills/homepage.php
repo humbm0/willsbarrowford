@@ -12,7 +12,7 @@
 <div class="hero-wrapper">
   <div class="container-fluid hero">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <div class="wrapper">
           <div>
             <h5><?php the_field('sub_heading'); ?></h5>
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 image-col">
+      <div class="col-lg-8 image-col">
         <div class="hero-slider">
           <?php
           $images = get_field('hero_slider');
@@ -36,58 +36,20 @@
   </div>
 </div>
 
-<!-- <div class="container-fluid spacing-xl">
-  <div class="row">
-    <div class="hero">
-      <div class="hero-slider">
-        <?php
-        $images = get_field('hero_slider');
-        if( $images ): ?>
-          <?php foreach( $images as $image ): ?>
-            <div class='bckgd-image' style='background-image: url("<?php echo $image['sizes']['large']; ?>");'></div>
-          <?php endforeach; ?>
-        <?php endif; ?>
-      </div>
-      <div class="overlay">
-
-      </div>
-      <div class="container">
-        <div class="text" data-aos="fade-up">
-          <div class="wrapper">
-            <h5><?php the_field('sub_heading'); ?></h5>
-            <h1><?php the_field('heading'); ?></h1>
-            <p class="l"><?php the_field('hero_para'); ?></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div class="container section" id="story">
   <div class="row">
-    <div class="col-md-3 offset-md-1">
+    <div class="col-md-4 col-lg-3 offset-lg-1">
       <h5 data-aos="fade-up" data-aos-delay="400">Our story</h5>
       <h2 data-aos="fade-up" data-aos-delay="500">A bit about us</h2>
     </div>
-    <div class="col-md-6 offset-md-1">
+    <div class="col-md-7 col-lg-6 offset-md-1">
       <p data-aos="fade-up" data-aos-delay="600"><?php the_field('about_us'); ?></p>
     </div>
   </div>
 </div>
 
-<!-- <div class="container two-col-img-text spacing-xl" id="story">
-  <div class="row">
-    <div class="col-md-6 content">
-      <h5 data-aos="fade-up" data-aos-delay="400">Our story</h5>
-      <h2 data-aos="fade-up" data-aos-delay="500">A bit about us</h2>
-      <p data-aos="fade-up" data-aos-delay="600"><?php the_field('about_us'); ?></p>
-    </div>
-    <div class="col-md-6 img-block" data-aos="fade-up">
-      <img class="" src="<?php the_field('about_image');?>" alt="">
-    </div>
-  </div>
-</div> -->
+
 
 <div class="container section two-col-text-img" id="menu">
   <div class="row">
@@ -109,47 +71,23 @@
   </div>
 </div>
 
-<!-- <div class="conatiner-fluid spacing-xl">
-  <div class="row">
-    <div class="col-md-12">
-      <a href="<?php the_field('menu_document');?>" target="_blank" class="menu">
-        <img src="<?php the_field('menu_image'); ?>" alt="">
-        <div class="heading">
-          <h5>Our menu</h5>
-          <h2>Grab a bite</h2>
-        </div>
-      </a>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div class="container" id="gallery">
-  <div class="row">
-    <div class="grid spacing-s">
-      <div class="grid-sizer"></div>
-      <?php
-      $images = get_field('gallery');
-      if( $images ): ?>
-        <?php foreach( $images as $image ): ?>
-          <div class='grid-item' data-aos='fade-up'>
-            <div class='photo-thumb' style='background-image: url("<?php echo $image['sizes']['large']; ?>");'></div>
-          </div>
-        <?php endforeach; ?>
-      <?php endif; ?>
-    </div>
-  </div>
-</div> -->
 
 
 
 <div class="container section" id="gallery">
   <div class="row">
-    <div class="col-md-3 offset-md-1">
+      <div class="col-md-4 col-lg-3 offset-lg-1">
         <div class="gallery-text" id="basic-waypoint">
         <h5 data-aos="fade-up" data-aos-delay="400">Our gallery</h5>
         <h2 data-aos="fade-up" data-aos-delay="500">What we're up to</h2>
+        <div class="social-links">
+          <ul>
+            <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/facebook.svg" alt=""></a></li>
+            <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/linkedin.svg" alt=""></a></li>
+          </ul>
         </div>
+      </div>
     </div>
     <div class="col-md-7 offset-md-1">
       <div class="row">
@@ -187,6 +125,8 @@
     </div>
   </div>
 </div>
+
+
 
 <div class="container section " id="visit-us">
   <div class="row">

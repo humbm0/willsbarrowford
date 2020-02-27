@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="wrapper">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             <h5><?php the_field('sub_heading'); ?></h5>
             <h1><?php the_field('heading'); ?></h1>
             <p class="l"><?php the_field('hero_para'); ?></p>
@@ -54,17 +54,17 @@
 <div class="container section two-col-text-img" id="menu">
   <div class="row">
     <div class="col-md-6">
-    <a href="<?php the_field('menu_document');?>" target="_blank">
+    <a href="<?php the_field('menu_document');?>" target="_blank" data-aos="fade-up" data-aos-delay="400">
       <img src="<?php the_field('menu_image'); ?>" alt="">
     </a>
     </div>
     <div class="col-md-6">
       <div class="wrapper">
         <div>
-          <h5>Our menu</h5>
-          <h2>Grab a bite</h2>
-          <p data-aos="fade-up" data-aos-delay="600"><?php the_field('menu_text'); ?></p>
-          <a href="<?php the_field('menu_document');?>" target="_blank">Take a look</a>
+          <h5 data-aos="fade-up" data-aos-delay="500">Our menu</h5>
+          <h2 data-aos="fade-up" data-aos-delay="600">Grab a bite</h2>
+          <p data-aos="fade-up" data-aos-delay="700"><?php the_field('menu_text'); ?></p>
+          <a href="<?php the_field('menu_document');?>" target="_blank" data-aos="fade-up" data-aos-delay="700">Take a look</a>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
         <div class="gallery-text" id="basic-waypoint">
         <h5 data-aos="fade-up" data-aos-delay="400">Our gallery</h5>
         <h2 data-aos="fade-up" data-aos-delay="500">What we're up to</h2>
-        <div class="social-links">
+        <div class="social-links" data-aos="fade-up" data-aos-delay="600">
           <ul>
             <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/facebook.svg" alt=""></a></li>
             <li><a href="#"><img src="<?php echo get_bloginfo( 'template_directory' );?>/img/instagram.svg" alt=""></a></li>
@@ -138,8 +138,10 @@
     <div class="col-md-5">
       <div class="wrapper">
         <div>
-          <h2>Visit us</h2>
-          <?php the_field('contact'); ?>
+          <h2 data-aos="fade-up" data-aos-delay="400">Visit us</h2>
+          <div data-aos="fade-up" data-aos-delay="500">
+            <?php the_field('contact'); ?>
+          </div>
         </div>
       </div>
     </div>

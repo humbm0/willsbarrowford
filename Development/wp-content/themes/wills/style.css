@@ -26,7 +26,7 @@ div{
   background-size: cover;
 }
 h1,h2,h3,h4,h6{
-  margin-bottom: 1.25px;
+  margin-bottom: 0.23em;
   font-family: 'DM Serif Display', serif;
   font-weight: 200;
   color: #383838;
@@ -138,6 +138,20 @@ ul{
   display: block;
   transition: all 0.4s ease;
 }
+.nav p{
+  margin: 0;
+}
+.nav .number{
+  font-size: 1.333em;
+  padding-left: 4px;
+}
+.nav a{
+  border: none;
+  padding-bottom: 0;
+}
+.nav .icon{
+  display: none;
+}
 
 .nav.scroll{
   height: 80px;
@@ -199,8 +213,10 @@ ul{
 }
 
 
-
-.gallery-text{
+#sb_instagram a{
+  border-bottom: none;
+}
+.sticky{
   position: sticky;
   top: 120px;
 }
@@ -312,18 +328,33 @@ html:not(.no-js) [data-aos=fade-up] {
 
 
 @media (max-width: 576px){
-  h1 {
-    font-size: 3.998em;
+  h1 {font-size: 3.157em;}
+
+  h2 {font-size: 2.369em;}
+
+  h3 {font-size: 1.777em;}
+
+  h4 {font-size: 1.333em;}
+  h5 {font-size: 1em;}
+
+  .nav .label{
+    display: none;
+  }
+  .nav img{
+    position: relative;
+    left: 0;
+    margin-left: 0px !important;
+    display: block;
+  }
+  .nav .icon{
+    display: inline-block;
   }
 
-  h2 {font-size: 2.827em;}
-
-  h3 {font-size: 1.999em;}
-
-  h4 {font-size: 1em;}
-
-  .nav img {
-    height: 64px;
+  .hero{
+    margin-bottom:80px;
+  }
+  .hero .bckgd-image{
+    height: 420px;
   }
   .hero-wrapper{
     padding-left: 16px;
@@ -334,4 +365,12 @@ html:not(.no-js) [data-aos=fade-up] {
     padding-left: 16px;
     padding-right: 16px;
   }
+  .wrapper{
+    padding: 0px;
+    padding-top: 24px;
+  }
+  .section{
+    margin-bottom: 80px;
+  }
+
 }

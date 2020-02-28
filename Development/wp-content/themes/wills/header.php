@@ -45,6 +45,7 @@
 				<li><a class="nav-item" href="#visit-us">Visit us</a></li>
 			</ul>
 			<img class="" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo.png" alt="">
-			<button class="primary-button">Book a table</button>
+			<!-- <button class="primary-button">Book a table</button> -->
+			<p><span class="label">Book a table:</span><ion-icon name="call" class="icon"></ion-icon><a href="tel:<?php echo get_option('support_phone'); ?>" class="number"> <?php echo get_option('support_phone'); ?></a></p>
 		</div>
 	</div>
